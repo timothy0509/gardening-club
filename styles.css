@@ -1,0 +1,222 @@
+/* styles.css */
+:root {
+  /* Material You–style palette */
+  --primary: #6750A4;
+  --on-primary: #FFFFFF;
+  --primary-container: #EADDFF;
+  --on-primary-container: #21005D;
+  --secondary: #625B71;
+  --on-secondary: #FFFFFF;
+  --secondary-container: #E8DEF8;
+  --on-secondary-container: #1D192B;
+  --surface: #FFFBFE;
+  --on-surface: #1C1B1F;
+  --surface-variant: #E7E0EC;
+  --on-surface-variant: #49454F;
+  --outline: #79747E;
+  --elev1: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  --elev2: 0px 2px 2px rgba(0, 0, 0, 0.07),
+    0px 1px 3px rgba(0, 0, 0, 0.03);
+  --shape-sm: 8px;
+  --shape-md: 12px;
+  --shape-lg: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Google Sans', sans-serif;
+  background: var(--surface);
+  color: var(--on-surface);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.app-bar {
+  background: var(--primary);
+  color: var(--on-primary);
+  box-shadow: var(--elev2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.app-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: 0;
+  font-weight: 500;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+.nav-list a {
+  color: var(--on-primary);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: var(--shape-sm);
+  transition: background 0.3s;
+}
+.nav-list a:hover {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--on-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--shape-md);
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: var(--elev1);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.btn:hover {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+  box-shadow: var(--elev2);
+}
+
+.btn-text {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.btn-text:hover {
+  text-decoration: underline;
+}
+
+.section {
+  padding: 2rem 0;
+}
+
+.hero {
+  background: url('images/garden-hero.jpg') center/cover no-repeat;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: overlay;
+  color: var(--on-primary);
+  text-align: center;
+  padding: 6rem 0;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--surface);
+  color: var(--on-surface);
+  padding: 1.5rem;
+  border-radius: var(--shape-md);
+  box-shadow: var(--elev1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.card img {
+  width: 100%;
+  border-radius: var(--shape-sm);
+  margin-bottom: 1rem;
+}
+.card .material-symbols-outlined {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.resources-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.resources-list li {
+  margin-bottom: 0.5rem;
+}
+.resources-list a {
+  display: block;
+  background: var(--surface-variant);
+  color: var(--on-surface-variant);
+  padding: 0.75rem;
+  border-radius: var(--shape-sm);
+  text-decoration: none;
+  box-shadow: var(--elev1);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.resources-list a:hover {
+  background: var(--surface);
+  box-shadow: var(--elev2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.grid img {
+  width: 100%;
+  border-radius: var(--shape-sm);
+}
+
+.testimonials blockquote {
+  margin: 0;
+  font-style: italic;
+}
+.testimonials footer {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: var(--secondary);
+}
+
+.footer {
+  background: var(--surface-variant);
+  color: var(--on-surface-variant);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+}
