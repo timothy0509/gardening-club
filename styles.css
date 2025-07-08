@@ -1,6 +1,3 @@
-/*--------------------------
-  Variables & Base Styles
----------------------------*/
 :root {
   --color-primary: #2e7d32;
   --color-primary-dark: #27632a;
@@ -8,15 +5,13 @@
   --color-background: #fafafa;
   --color-surface: #fff;
   --color-on-primary: #fff;
-
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
   --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
   --shadow-lg: 0 10px 20px rgba(0,0,0,0.15);
-
   --radius: 6px;
-  --bp-md: 768px;
 }
 
+/* Reset & base */
 *,
 *::before,
 *::after {
@@ -30,7 +25,6 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   background: var(--color-background);
   color: #333;
-  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -42,33 +36,27 @@ body {
 }
 .visually-hidden {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0);
 }
 
-/* Skip Link */
+/* Skip link */
 .skip-link {
   position: absolute;
-  top: -40px;
-  left: 1rem;
+  top: -40px; left: 1rem;
   background: var(--color-primary);
   color: var(--color-on-primary);
   padding: 0.5rem;
   text-decoration: none;
-  z-index: 1000;
   transition: top 0.3s;
+  z-index: 1000;
 }
 .skip-link:focus {
   top: 1rem;
 }
 
-/*--------------------------
-  Header & Navigation
----------------------------*/
+/* Header */
 .header {
   background: var(--color-surface);
   box-shadow: var(--shadow-md);
@@ -96,8 +84,7 @@ body {
   display: flex;
   gap: 2rem;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
 }
 .nav__list a {
   color: #333;
@@ -118,9 +105,7 @@ body {
   cursor: pointer;
 }
 
-/*--------------------------
-  Hero
----------------------------*/
+/* Hero */
 .hero {
   position: relative;
   height: 60vh;
@@ -149,16 +134,14 @@ body {
   margin: 0 0 2rem;
 }
 
-/*--------------------------
-  Buttons
----------------------------*/
+/* Buttons */
 .btn {
   display: inline-block;
   border: none;
   border-radius: var(--radius);
-  text-decoration: none;
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
+  text-decoration: none;
 }
 .btn--primary {
   background: var(--color-primary);
@@ -181,9 +164,7 @@ body {
   background: rgba(46,125,50,0.1);
 }
 
-/*--------------------------
-  Sections & Typography
----------------------------*/
+/* Sections */
 .section {
   padding: 4rem 0;
 }
@@ -203,9 +184,7 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/*--------------------------
-  Grid & Cards
----------------------------*/
+/* Grid & Cards */
 .grid {
   display: grid;
   gap: 2rem;
@@ -247,13 +226,10 @@ body {
   margin-bottom: 1rem;
 }
 
-/*--------------------------
-  Events & Resources
----------------------------*/
+/* Events & Resources */
 .events {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
 }
 .events__item {
   background: var(--color-surface);
@@ -278,8 +254,7 @@ body {
 }
 .resources {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
 }
 .resources li {
   margin-bottom: 0.75rem;
@@ -294,9 +269,7 @@ body {
   color: var(--color-primary-dark);
 }
 
-/*--------------------------
-  CTA Section & Footer
----------------------------*/
+/* CTA Section & Footer */
 .section--cta {
   background: var(--color-primary);
   text-align: center;
@@ -363,9 +336,7 @@ body {
   font-size: 0.875rem;
 }
 
-/*--------------------------
-  Reveal Animations
----------------------------*/
+/* Reveal animations */
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -377,43 +348,36 @@ body {
   transform: translateY(0);
 }
 
-/*--------------------------
-  Responsive (<=768px)
----------------------------*/
-@media (max-width: var(--bp-md)) {
+/* Responsive <= 768px */
+@media (max-width: 768px) {
   .nav-toggle {
     display: block;
   }
   .nav__list {
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 0; right: 0;
     flex-direction: column;
     background: var(--color-surface);
-    width: 250px;
-    height: 100vh;
+    width: 250px; height: 100vh;
     padding: 3rem 1.5rem;
     gap: 1.5rem;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     box-shadow: -2px 0 8px rgba(0,0,0,0.1);
   }
-  .nav--open .nav__list {
+  .nav.nav--open .nav__list {
     transform: translateX(0);
   }
   .nav__list a {
     font-size: 1.125rem;
   }
-
   .grid--2,
   .grid--3 {
     grid-template-columns: 1fr;
   }
-
   .section {
     padding: 3rem 0;
   }
-
   .hero {
     height: 50vh;
   }
