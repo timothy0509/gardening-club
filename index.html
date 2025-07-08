@@ -1,31 +1,46 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport"
-        content="width=device-width,initial-scale=1" />
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  />
+  <meta name="theme-color" content="#2e7d32" />
   <title>Green Thumb Club</title>
-  <link rel="preconnect"
-        href="https://fonts.googleapis.com" />
-  <link rel="preconnect"
-        href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?
+      family=Montserrat:wght@600;700&
+      family=Source+Sans+Pro:wght@400;600&
+      display=swap"
     rel="stylesheet"
   />
   <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    href="https://fonts.googleapis.com/css2?family=Material+Icons"
     rel="stylesheet"
   />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="app-bar">
-    <div class="container app-bar-content">
-      <h1 class="logo">Green Thumb</h1>
-      <nav>
-        <ul class="nav-list">
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">Green Thumb</a>
+      <button
+        class="nav-toggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span class="material-icons">menu</span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#membership">Membership</a></li>
@@ -39,140 +54,219 @@
   </header>
 
   <section id="home" class="hero">
-    <div class="container hero-content">
-      <h2 class="hero-title">Grow. Learn. Thrive.</h2>
-      <p class="hero-subtitle">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content reveal">
+      <h1 class="hero__title">Grow. Learn. Thrive.</h1>
+      <p class="hero__subtitle">
         Join our school gardening club to cultivate skills and green spaces.
       </p>
-      <a href="#join" class="btn">Join Now</a>
+      <a href="#join" class="btn btn--primary">Join Now</a>
     </div>
   </section>
 
-  <section id="about" class="container section about">
-    <h2>About Us</h2>
-    <p>
-      Green Thumb Club connects students with nature through sustainable
-      gardening. We maintain a lush community garden on campus and host
-      workshops year-round to share knowledge and foster eco-friendly
-      practices.
+  <main id="main">
+    <section id="about" class="section reveal">
+      <div class="container">
+        <h2 class="section__title">About Us</h2>
+        <p class="section__text">
+          Green Thumb Club empowers students to connect with nature through
+          sustainable gardening. Our campus garden flourishes with
+          community-driven projects, workshops, and events year-round.
+        </p>
+      </div>
+    </section>
+
+    <section id="membership" class="section section--alt reveal">
+      <div class="container">
+        <h2 class="section__title">Membership Benefits</h2>
+        <div class="grid grid--3">
+          <div class="card">
+            <span class="material-icons card__icon">groups</span>
+            <h3 class="card__title">Community</h3>
+            <p class="card__text">
+              Collaborate with fellow students on your gardening journey.
+            </p>
+          </div>
+          <div class="card">
+            <span class="material-icons card__icon">eco</span>
+            <h3 class="card__title">Sustainability</h3>
+            <p class="card__text">
+              Learn eco-friendly planting and composting techniques.
+            </p>
+          </div>
+          <div class="card">
+            <span class="material-icons card__icon">school</span>
+            <h3 class="card__title">Workshops</h3>
+            <p class="card__text">
+              Attend hands-on sessions led by expert gardeners.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="section reveal">
+      <div class="container">
+        <h2 class="section__title">Upcoming Events</h2>
+        <ul class="events">
+          <li class="events__item">
+            <h3>Spring Planting</h3>
+            <time datetime="2025-04-15">April 15, 2025</time>
+            <span>3:00 PM</span>
+          </li>
+          <li class="events__item">
+            <h3>Herb Workshop</h3>
+            <time datetime="2025-05-05">May 5, 2025</time>
+            <span>2:00 PM</span>
+          </li>
+          <li class="events__item">
+            <h3>Harvest Festival</h3>
+            <time datetime="2025-09-20">Sept 20, 2025</time>
+            <span>4:00 PM</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="resources" class="section section--alt reveal">
+      <div class="container">
+        <h2 class="section__title">Resources</h2>
+        <ul class="resources">
+          <li>
+            <a
+              href="https://greenthumb.school.edu/resources/
+              gardening-101.pdf"
+              target="_blank"
+            >Gardening 101 Guide (PDF)</a>
+          </li>
+          <li>
+            <a
+              href="https://greenthumb.school.edu/resources/
+              composting-tips"
+              target="_blank"
+            >Composting Tips</a>
+          </li>
+          <li>
+            <a
+              href="https://greenthumb.school.edu/resources/
+              plant-care-calendar"
+              target="_blank"
+            >Plant Care Calendar</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="blog" class="section reveal">
+      <div class="container">
+        <h2 class="section__title">From Our Blog</h2>
+        <div class="grid grid--2">
+          <article class="card card--blog">
+            <img
+              src="images/blog1.jpg"
+              alt="Seed trays on a table"
+              class="card__image"
+            />
+            <h3 class="card__title">Seed Starting at Home</h3>
+            <p class="card__text">
+              Get a head start on your garden with easy indoor seed trays.
+            </p>
+            <a
+              href="https://greenthumb.school.edu/blog/
+              seed-starting-at-home"
+              class="btn btn--text"
+            >Read More →</a>
+          </article>
+
+          <article class="card card--blog">
+            <img
+              src="images/blog2.jpg"
+              alt="Healthy vegetable plants"
+              class="card__image"
+            />
+            <h3 class="card__title">Organic Pest Control</h3>
+            <p class="card__text">
+              Keep your plants safe with natural, eco-friendly remedies.
+            </p>
+            <a
+              href="https://greenthumb.school.edu/blog/
+              organic-pest-control"
+              class="btn btn--text"
+            >Read More →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="join" class="section section--cta reveal">
+      <div class="container section--cta-content">
+        <h2 class="section__title">Ready to Grow with Us?</h2>
+        <a href="mailto:greenthumb@school.edu" class="btn btn--primary">
+          Contact Us
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer reveal">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <h3 class="footer__title">Contact</h3>
+        <p>Email: <a href="mailto:greenthumb@school.edu">
+          greenthumb@school.edu</a></p>
+        <p>Instagram: <a
+          href="https://instagram.com/greenthumbclub"
+          target="_blank">@greenthumbclub</a></p>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__title">Newsletter</h3>
+        <form class="newsletter-form">
+          <label for="footer-email" class="visually-hidden">
+            Email address
+          </label>
+          <div class="input-group">
+            <input
+              type="email"
+              id="footer-email"
+              placeholder="you@example.com"
+              required
+            />
+            <button type="submit" class="btn btn--primary">
+              Subscribe
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <p class="footer__copyright">
+      © 2025 Green Thumb Club. All rights reserved.
     </p>
-  </section>
-
-  <section id="membership" class="container section membership">
-    <h2>Membership Benefits</h2>
-    <div class="grid-cards">
-      <div class="card">
-        <span class="material-symbols-outlined">groups</span>
-        <h3>Community</h3>
-        <p>Collaborate with fellow students and share your gardening journey.</p>
-      </div>
-      <div class="card">
-        <span class="material-symbols-outlined">eco</span>
-        <h3>Sustainability</h3>
-        <p>Learn eco-friendly planting and composting techniques.</p>
-      </div>
-      <div class="card">
-        <span class="material-symbols-outlined">school</span>
-        <h3>Workshops</h3>
-        <p>Attend hands-on sessions led by experts and alumni gardeners.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="events" class="container section events">
-    <h2>Upcoming Events</h2>
-    <div class="grid-cards">
-      <div class="card">
-        <h3>Spring Planting</h3>
-        <p>April 15, 3 PM</p>
-      </div>
-      <div class="card">
-        <h3>Herb Workshop</h3>
-        <p>May 5, 2 PM</p>
-      </div>
-      <div class="card">
-        <h3>Harvest Festival</h3>
-        <p>September 20, 4 PM</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="resources" class="container section resources">
-    <h2>Resources</h2>
-    <ul class="resources-list">
-      <li><a href="#">Gardening 101 Guide</a></li>
-      <li><a href="#">Composting Tips</a></li>
-      <li><a href="#">Plant Care Calendar</a></li>
-    </ul>
-  </section>
-
-  <section id="blog" class="container section blog">
-    <h2>Latest from Our Blog</h2>
-    <div class="grid-cards">
-      <article class="card">
-        <img src="images/blog1.jpg" alt="Seed trays on a table" />
-        <h3>Seed Starting at Home</h3>
-        <p>Get a head start on your garden with easy indoor seed trays.</p>
-        <a href="#" class="btn-text">Read More</a>
-      </article>
-      <article class="card">
-        <img src="images/blog2.jpg" alt="Healthy vegetable plants" />
-        <h3>Organic Pest Control</h3>
-        <p>Keep your plants safe with natural, eco-friendly remedies.</p>
-        <a href="#" class="btn-text">Read More</a>
-      </article>
-    </div>
-  </section>
-
-  <section id="gallery" class="container section gallery">
-    <h2>Gallery</h2>
-    <div class="grid">
-      <img src="images/seedlings.jpg" alt="Seedlings" />
-      <img src="images/workshop.jpg" alt="Workshop" />
-      <img src="images/festival.jpg" alt="Festival" />
-    </div>
-  </section>
-
-  <section id="testimonials" class="container section testimonials">
-    <h2>What Members Say</h2>
-    <div class="grid-cards">
-      <div class="card">
-        <blockquote>
-          “The club taught me everything I know about growing herbs at home!”
-          <footer>- Alex</footer>
-        </blockquote>
-      </div>
-      <div class="card">
-        <blockquote>
-          “I’ve made lifelong friends while helping our garden flourish.”
-          <footer>- Jordan</footer>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <section id="join" class="container section join">
-    <h2>Ready to Grow with Us?</h2>
-    <a href="mailto:greenthumb@school.edu" class="btn">Contact Us</a>
-  </section>
-
-  <section id="contact" class="container section contact">
-    <h2>Contact</h2>
-    <p>
-      Email:
-      <a href="mailto:greenthumb@school.edu">
-        greenthumb@school.edu
-      </a>
-    </p>
-    <p>Follow us on social media for updates!</p>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <p>
-        &copy; 2025 Green Thumb Club. Designed with Material You principles.
-      </p>
-    </div>
   </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    navToggle.addEventListener('click', () => {
+      const expanded =
+        navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('nav--open');
+    });
+
+    // Reveal-on-scroll
+    document.querySelectorAll('.reveal').forEach((el) => {
+      const obs = new IntersectionObserver(
+        ([entry], observer) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal--active');
+            observer.unobserve(entry.target);
+          }
+        },
+        { threshold: 0.15 }
+      );
+      obs.observe(el);
+    });
+  </script>
 </body>
 </html>
